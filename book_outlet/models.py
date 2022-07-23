@@ -6,7 +6,9 @@ from django.utils.text import slugify
 # Create your models here.
 
 class Author(models.Model):
-    pass
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    
 
 
 class Book(models.Model):
