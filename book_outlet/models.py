@@ -5,6 +5,10 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+class Author(models.Model):
+    pass
+
+
 class Book(models.Model):
     title = models.CharField(max_length=50)
     rating = models.IntegerField(
