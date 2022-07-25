@@ -5,6 +5,13 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+
+class Address(models.Model):
+    street = models.CharField(max_length=80)
+    postal_code = models.CharField(max_length=5)
+    city = models.CharField(max_length=50)
+    
+
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -12,6 +19,7 @@ class Author(models.Model):
     
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
+    
     
     def __str__(self):
         return self.full_name()
