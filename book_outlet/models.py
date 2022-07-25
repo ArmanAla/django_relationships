@@ -15,7 +15,8 @@ class Address(models.Model):
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    address = models.OneToOneField(Address, on_delete=models.CASCADE) # related_name automatically is "author"
+    address = models.OneToOneField(Address, 
+            on_delete=models.CASCADE, null=True) # related_name automatically is "author"
     
     
     def full_name(self):
