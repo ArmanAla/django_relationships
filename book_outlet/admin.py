@@ -10,7 +10,7 @@ class BookAdmin(admin.ModelAdmin):
     
     
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name")
+    list_display = ("first_name", "last_name", "address")
 
 
     
