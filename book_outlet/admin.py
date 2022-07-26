@@ -13,6 +13,11 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = ("first_name", "last_name")
 
 
+    
+class AddressAdmin(admin.ModelAdmin):
+    list_display = ("street", "postal_code", "city")
+
+
 admin.site.register(Book, BookAdmin)
 admin.site.register(Author, AuthorAdmin)
-admin.site.register(Address)
+admin.site.register(Address, AddressAdmin)
