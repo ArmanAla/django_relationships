@@ -6,6 +6,9 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+class Country(models.Model):
+    name = models.CharField(max_length=80)
+    code = models.CharField(max_length=2)
 
 class Address(models.Model):
     street = models.CharField(max_length=80)
@@ -13,7 +16,7 @@ class Address(models.Model):
     city = models.CharField(max_length=50)
     
     def full_address(self):
-        return f"{self.author.full_name()} lives in {self.city} on {self.street} ({self.postal_code})"
+        return f"author lives in {self.city} on {self.street} ({self.postal_code})"
     
     def __str__(self):
         return self.full_address()
