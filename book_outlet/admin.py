@@ -7,6 +7,10 @@ class BookAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_filter = ("author", "rating")
     list_display = ("title", "author")
+    # list_display = ("title", "author", "get_countries")
+    
+    # def get_countries(self, obj):
+    #     return "\n".join([p.name for p in obj.published_countries.all()])
     
     
 class AuthorAdmin(admin.ModelAdmin):
